@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Birthday Night</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game">
+  <div id="introOverlay">
+    <div class="introBox">
+      <div class="introMark">◈</div>
+      <div class="introTitle">A SMALL PLACE FOR YOU</div>
+      <div class="introSub">click to enter</div>
+      <button id="enterButton">ENTER</button>
+    </div>
+  </div>
+
+  <canvas id="scene" class="pre-reveal" width="1536" height="1024"></canvas>
+
+  <!-- The four click areas are deliberately small. Move/resize them in CONFIG in script.js. -->
+  <button class="hitbox coder" data-character="coder" aria-label="Builder"></button>
+  <button class="hitbox gorba" data-character="gorba" aria-label="Gorba"></button>
+  <button class="hitbox reader" data-character="reader" aria-label="Reader"></button>
+  <button class="hitbox planner" data-character="planner" aria-label="Planner"></button>
+
+  <section id="infoPanel" class="panel hidden">
+    <button id="closeInfo" class="close" aria-label="Close"><img id="infoCloseIcon" src="assets/icons/x.svg" alt=""></button>
+    <div id="infoContent"></div>
+  </section>
+
+  <section id="letterPanel" class="letter-panel hidden">
+    <button id="closeLetter" class="close phoenix-close" aria-label="Close"><img src="assets/icons/phoenix.png" alt=""></button>
+    <div class="letter-inner">
+      <div class="code-line"> </div>
+      <pre id="letterText"></pre>
+    </div>
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
